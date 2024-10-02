@@ -23,6 +23,7 @@ const fetchProducts = () => {
 const setItemsPerPage = (number: number) => {
   productsStore.itemsPerPage = number;
   fetchProducts();
+  productsStore.resetCurrentPage();
 };
 
 onMounted(fetchProducts);
